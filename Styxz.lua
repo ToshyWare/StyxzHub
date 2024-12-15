@@ -23,10 +23,10 @@ end
 
 local gameId = game.PlaceId
 
-if gameId == 2753915549 or gameId == 4442272183 or gameId == 7449423635 then
+if gameId == 10260193230 then
     -- Blox Fruits
-    print("Detectado Blox Fruits, executando script...")
-    safeLoad("https://raw.githubusercontent.com/ToshyWare/StyxzHub/refs/heads/main/BloxFruits.lua")
+    print("Meme Sea Detected, Loading Script...")
+    safeLoad("https://raw.githubusercontent.com/ToshyWare/StyxzHub/refs/heads/main/MemeSea.lua")
 else
-    print("Jogo não reconhecido. Nenhum script foi executado.")
+    print("Game Not Found")
 end
