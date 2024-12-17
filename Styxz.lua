@@ -9,24 +9,18 @@
 :......::::::..::::::::..:::::..:::::..::........:::::..:::::..::
 ]]--
 
-local function safeLoad(url)
-    local success, errorMsg = pcall(function()
-        loadstring(game:HttpGet(url))()
-    end)
-    
-    if success then
-        print("Script executado com sucesso!")
-    else
-        warn("Erro ao executar o script: " .. errorMsg)
-    end
-end
+local load = loadstring or load
+local ID = game.PlaceId
 
-local gameId = game.PlaceId
+local Scripts = {
+    ["FNaF Coop"] = "https://raw.githubusercontent.com/ToshyWare/StyxzHub/refs/heads/main/FNaFCoop.lua",
+}
+local IDs = {
+    [12495498157] = Scripts["FNaF Coop"],
+}
 
-if gameId == 10260193230 then
-    -- Blox Fruits
-    print("Meme Sea Detected, Loading Script...")
-    safeLoad("https://raw.githubusercontent.com/ToshyWare/StyxzHub/refs/heads/main/MemeSea.lua")
+if load and IDs[ID] then
+    load(game:HttpGet(IDs[ID]))()
 else
-    print("Game Not Found")
+    warn("Game Not Found, No Script Was Executed")
 end
