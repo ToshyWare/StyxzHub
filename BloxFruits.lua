@@ -8,4 +8,5 @@
 . ######::::: ##::::::: ##:::: ##:::. ##: ########:::: ##:::. ##:
 :......::::::..::::::::..:::::..:::::..::........:::::..:::::..::
 ]]--
+
 return loadstring(game:HttpGet("https://raw.githubusercontent.com/ToshyWare/Obfuscated/refs/heads/main/SxBloxFruits.lua"))()
