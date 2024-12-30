@@ -9,18 +9,18 @@
 :......::::::..::::::::..:::::..:::::..::........:::::..:::::..::
 ]]--
 
-local load = loadstring or load
+local loadstring = loadstring or load
 local ID = game.PlaceId
 
 local Scripts = {
-    ["FNaF Coop"] = "https://raw.githubusercontent.com/ToshyWare/StyxzHub/refs/heads/main/FNaFCoop.lua",
+    ["Blox Fruits"] = "https://raw.githubusercontent.com/ToshyWare/StyxzHub/refs/heads/main/BloxFruits.lua",
 }
 local IDs = {
-    [12495498157] = Scripts["FNaF Coop"],
+    [2753915549] or [4442272183] or [7449423635] = Scripts["Blox Fruits"],
 }
 
-if load and IDs[ID] then
-    load(game:HttpGet(IDs[ID]))()
+if loadstring and IDs[ID] then
+    loadstring(game:HttpGet(IDs[ID]))()
 else
     warn("Game Not Found, No Script Was Executed")
 end
