@@ -4,8 +4,8 @@ local SaveFileName2 = "!Blacklist_Servers.json"
 local HopGuiCreation = loadstring(game:HttpGet('https://raw.githubusercontent.com/memaybeohub/NewPage/main/HopGui.lua'))()
 function SaveSettings2()
     local HttpService = game:GetService("HttpService")
-    if not isfolder("Tsuo Hub") then
-        makefolder("Tsuo Hub")
+    if not isfolder("Styxz Hub") then
+        makefolder("Styxz Hub")
     end
     writefile(SaveFileName2, HttpService:JSONEncode(Settings2))
 end
@@ -15,8 +15,8 @@ function ReadSetting2()
         pcall(
         function()
             local HttpService = game:GetService("HttpService")
-            if not isfolder("Tsuo Hub") then
-                makefolder("Tsuo Hub")
+            if not isfolder("Styxz Hub") then
+                makefolder("Styxz Hub")
             end
             return HttpService:JSONDecode(readfile(SaveFileName2))
         end
